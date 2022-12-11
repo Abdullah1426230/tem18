@@ -1,0 +1,757 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  list-style: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 15px;
+  width: 100%;
+}
+
+::-moz-selection {
+  background-color: #ffe500;
+  color: #1a1a1a;
+}
+
+::selection {
+  background-color: #ffe500;
+  color: #1a1a1a;
+}
+
+p {
+  color: #707070 !important;
+}
+
+#loading {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 55555555555555550000000000000000000000000;
+  background-color: rgba(6, 7, 44, 0.9);
+  display: flex;
+  transition: opacity 2s;
+  justify-content: center;
+  align-items: center;
+}
+#loading h3 {
+  color: white;
+  text-align: center;
+  margin-top: -15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  overflow-x: hidden !important;
+}
+
+.heading {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.heading h2 {
+  margin: 30px 0;
+  font-weight: 400;
+  word-spacing: 9px;
+  letter-spacing: 12px;
+}
+.heading p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+  text-transform: none;
+  letter-spacing: 1px;
+  word-spacing: 0.5px;
+}
+
+#toTop {
+  background-color: #ffe500;
+  padding: 10px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 555555;
+  left: 15px;
+  bottom: 15px;
+}
+#toTop img {
+  width: 40px;
+}
+
+#openMenu2 {
+  padding: 18px 22px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #1a1a1a;
+  color: #ffe500;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 555555;
+}
+
+/*=============================================
+=            Header            =
+=============================================*/
+header {
+  background-color: #1a1a1a;
+  background-image: url("images/img1.jpg");
+  background-size: cover;
+}
+header .container {
+  position: relative;
+}
+header .container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+header .container nav::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: #ffe500;
+}
+header .container span#openMenu {
+  cursor: pointer;
+  float: right;
+  direction: rtl;
+}
+header .container span#openMenu span {
+  height: 5px;
+  display: block;
+  margin: 10px;
+  background-color: #ffe500;
+  border-radius: 5px;
+}
+header .container span#openMenu span:first-of-type {
+  width: 45px;
+}
+header .container span#openMenu span:nth-of-type(2) {
+  width: 38px;
+}
+header .container span#openMenu span:last-of-type {
+  width: 30px;
+}
+header .container article {
+  color: white;
+  text-align: center;
+  padding: 25% 0;
+}
+header .container article h1 {
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  word-spacing: 10px;
+  font-weight: normal;
+}
+header .container article h2 {
+  font-weight: normal;
+  margin: 30px 0;
+  font-size: 18px;
+  letter-spacing: 8px;
+  word-spacing: 2px;
+}
+header .container article button {
+  border: 0;
+  background-color: #ffe500;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  padding: 15px 22px;
+}
+header .container span#toBottom {
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: arrowDown 3s infinite;
+          animation: arrowDown 3s infinite;
+}
+header .sideOverlay {
+  background-color: rgba(0, 0, 0, 0.74);
+  position: fixed;
+  z-index: 55555555555555;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+header aside {
+  background-color: #1a1a1a;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  transition: 0.4s;
+  height: 100vh;
+  width: 250px;
+  z-index: 555555555555555550000000;
+}
+header aside .title {
+  position: relative;
+  background-color: #ffe500;
+  padding: 18px;
+}
+header aside .title span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  right: 0;
+  width: 60px;
+  background-color: darkred;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+header aside li {
+  border-top: 2px solid #ffe500;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 18px;
+}
+header aside li:last-of-type {
+  border-bottom: 2px solid #ffe500;
+}
+header aside li:hover {
+  background-color: #ffe500;
+  color: #1a1a1a;
+  border: none;
+}
+
+@-webkit-keyframes arrowDown {
+  0%, 50%, 100% {
+    bottom: 10px;
+  }
+  25%, 75% {
+    bottom: 25px;
+  }
+}
+
+@keyframes arrowDown {
+  0%, 50%, 100% {
+    bottom: 10px;
+  }
+  25%, 75% {
+    bottom: 25px;
+  }
+}
+@media (max-width: 992px) {
+  header article h1,
+header article h2 {
+    letter-spacing: 3px !important;
+    word-spacing: 0 !important;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 576px) {
+  header article h1,
+header article h2 {
+    margin: 22px 0;
+  }
+}
+/*=====  End of Header  ======*/
+/*=============================================
+=            Section one            =
+=============================================*/
+section.one {
+  padding: 5% 0;
+  text-align: center;
+}
+section.one p {
+  margin: 30px auto;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+/*=====  End of Section one  ======*/
+/*=============================================
+=            Services            =
+=============================================*/
+section.services {
+  background-color: #f4f4f4;
+  padding: 5% 0;
+}
+section.services .body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.services .body .article {
+  background-color: white;
+  max-width: 280px;
+  margin: 15px auto;
+  width: 95%;
+}
+section.services .body .article article {
+  text-align: center;
+  padding: 50px 30px 20px;
+}
+section.services .body .article article:nth-of-type(3) h3, section.services .body .article article:last-of-type h3 {
+  letter-spacing: 3px;
+}
+section.services .body .article article img {
+  width: 100px;
+}
+section.services .body .article article h3 {
+  margin: 20px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  word-spacing: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+section.services .body .article article p {
+  line-height: 1.5;
+}
+section.services .body .article hr {
+  margin: 20px 15px 0;
+  border: 0;
+  height: 1px;
+  background: #1a1a1a;
+}
+section.services .body .article .degree {
+  padding: 15px;
+}
+section.services .body .article .degree div {
+  margin: 14px 0;
+}
+section.services .body .article .degree div span {
+  position: relative;
+  background-color: #f4f4f4;
+  display: inline-block;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+}
+section.services .body .article .degree div span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  background-color: #ffe500;
+}
+
+/*=====  End of Services  ======*/
+/*=============================================
+=            Statics            =
+=============================================*/
+section.statics {
+  background-color: #1a1a1a;
+  padding: 50px;
+}
+section.statics .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.statics .container article {
+  max-width: 280px;
+  background-color: white;
+  width: 100%;
+  margin: 15px auto;
+  text-align: center;
+  padding: 15px;
+}
+section.statics .container article h3 {
+  letter-spacing: 3px;
+}
+section.statics .container article h4 {
+  margin: 10px auto 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/*=====  End of Statics  ======*/
+/*=============================================
+=            Portfolio            =
+=============================================*/
+section.portfolio {
+  padding-top: 5%;
+}
+section.portfolio .types {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.portfolio .types .part {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100% - 40px);
+  border-top: 2px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+}
+section.portfolio .types .part li {
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+section.portfolio .types .part li:hover {
+  text-decoration: underline;
+}
+section.portfolio .types .img {
+  padding: 0 15px;
+}
+section.portfolio .portfolio-imgs {
+  margin: 40px auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.portfolio .portfolio-imgs div {
+  max-width: 300px;
+  position: relative;
+  cursor: pointer;
+}
+section.portfolio .portfolio-imgs div::before {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  content: "";
+  left: 32px;
+  right: 32px;
+  top: 32px;
+  bottom: 32px;
+  background-color: #ffe500;
+}
+section.portfolio .portfolio-imgs div:hover::before,
+section.portfolio .portfolio-imgs div:hover article {
+  visibility: visible;
+  opacity: 1;
+}
+section.portfolio .portfolio-imgs div article {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transition: 0.5s;
+  left: 15px;
+  right: 15px;
+  transform: translateY(-50%);
+  text-align: center;
+  background-color: white;
+}
+section.portfolio .portfolio-imgs div article h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 25px 15px;
+}
+section.portfolio .portfolio-imgs div article p {
+  padding: 0 15px 15px;
+  line-height: 1.5;
+}
+section.portfolio button {
+  display: block;
+  margin: 80px auto;
+  border: none;
+  background-color: #ffe500;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.4s;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+section.portfolio button:hover {
+  background-color: #1a1a1a;
+  color: #ffe500;
+}
+
+@media (max-width: 576px) {
+  section.portfolio .types {
+    flex-direction: column;
+  }
+  section.portfolio .types .part:last-of-type {
+    border-top: 0;
+  }
+  section.portfolio .types img {
+    display: none;
+  }
+}
+/*=====  End of Portfolio  ======*/
+/*=============================================
+=            Video            =
+=============================================*/
+section.video {
+  min-height: 300px;
+  background-size: cover;
+  position: relative;
+  background-image: url("./images/video.png");
+}
+section.video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 26, 26, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.video .overlay button {
+  display: block;
+  transform: translateY(10px);
+  background-color: transparent;
+  color: #ffe500;
+  border: 1px solid #ffe500;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 8px;
+  transition: 0.4s;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+section.video .overlay button:hover {
+  background-color: #ffe500;
+  color: #1a1a1a;
+}
+
+/*=====  End of Video  ======*/
+/*=============================================
+=            Team            =
+=============================================*/
+section.team {
+  padding: 80px 0;
+}
+section.team .heading {
+  margin-bottom: 80px;
+}
+section.team .articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.team .articles article {
+  max-width: 280px;
+  margin: 15px auto;
+  width: 95%;
+}
+section.team .articles article img {
+  background-color: #1a1a1a;
+  min-height: 250px;
+  min-width: 100%;
+  transform: translateY(5px);
+}
+section.team .articles article h3 {
+  background-color: #b3a000;
+  padding: 18px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+section.team .articles article p {
+  text-align: center;
+  padding: 18px;
+  line-height: 1.5;
+  box-shadow: -1px 2px 8px 0px;
+}
+section.team .last {
+  background-color: #ffe500;
+  min-height: 200px;
+  position: relative;
+  margin: 150px 0;
+}
+section.team .last .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.team .last .container h4 {
+  font-style: italic;
+}
+section.team .last .container > div {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  max-width: 550px;
+}
+section.team .last .container > div article {
+  background-color: #1a1a1a;
+  padding: 25px;
+}
+section.team .last .container > div article p {
+  color: #d9d9d9 !important;
+  line-height: 1.6;
+}
+section.team .last .container > div:first-of-type div {
+  text-align: center;
+  margin-top: 23%;
+}
+section.team .last .container > div:first-of-type div h4 {
+  text-align: start;
+}
+section.team .last .container > div:last-of-type div {
+  text-align: center;
+  margin-bottom: 23%;
+}
+section.team .last .container > div:last-of-type div h4 {
+  text-align: end;
+}
+section.team .last .container > div:last-of-type article p {
+  visibility: hidden;
+}
+
+@media (max-width: 1140px) {
+  section.team .last .container {
+    position: relative;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  section.team .last .container > div:last-of-type {
+    display: none;
+  }
+  section.team .last .container > div div {
+    margin: 15px auto !important;
+  }
+  section.team .last .container > div div h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center !important;
+  }
+}
+/*=====  End of Team  ======*/
+/*=============================================
+=            Footer            =
+=============================================*/
+footer {
+  background-color: #1a1a1a;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+footer .container p {
+  color: white !important;
+  font-size: 14px;
+}
+footer .container > div {
+  padding: 10px;
+  max-width: 280px;
+  margin: 18px auto;
+}
+footer .container > div h3 {
+  text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+footer .container > div li {
+  color: white;
+  margin-bottom: 22px;
+  font-size: 14px;
+  cursor: pointer;
+}
+footer .container > div li:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ffe500;
+          text-decoration-color: #ffe500;
+  text-decoration-thickness: 2px;
+}
+footer .container > div.logo-address p {
+  color: white;
+  line-height: 1.6;
+}
+footer .container > div.logo-address p:last-of-type {
+  margin-top: 15px;
+}
+footer .container > div.logo-address p:last-of-type span {
+  color: #ffe500;
+}
+footer .container > div.contact-us button {
+  display: block;
+  width: 95%;
+  margin: 20px auto;
+  background-color: #ffe500;
+  padding: 15px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #1a1a1a;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: 0.4s;
+  border: 2px solid transparent;
+}
+footer .container > div.contact-us button:hover {
+  background-color: #1a1a1a;
+  color: #ffe500;
+  border-color: #ffe500;
+}
+footer .container > div.contact-us p {
+  line-height: 1.6;
+}
+footer .container > div.contact-us span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 5px;
+  height: 40px;
+  background-color: white;
+  transition: 0.4s;
+}
+footer .container > div.contact-us span:hover {
+  background-color: #ffe500;
+}
+footer .container > div.contact-us span img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*=====  End of Footer  ======*//*# sourceMappingURL=main.css.map */

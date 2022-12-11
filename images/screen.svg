@@ -1,0 +1,9 @@
+<svg width="576" height="512" xmlns="http://www.w3.org/2000/svg">
+ <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_2" height="320" width="469" y="54" x="56" stroke="#000" fill="#ffe500"/>
+  <path id="svg_1" d="m64,0c-35.3,0 -64,28.7 -64,64l0,288c0,35.3 28.7,64 64,64l176,0l-10.7,32l-69.3,0c-17.7,0 -32,14.3 -32,32s14.3,32 32,32l256,0c17.7,0 32,-14.3 32,-32s-14.3,-32 -32,-32l-69.3,0l-10.7,-32l176,0c35.3,0 64,-28.7 64,-64l0,-288c0,-35.3 -28.7,-64 -64,-64l-448,0zm448,64l0,288l-448,0l0,-288l448,0z"/>
+ </g>
+</svg>

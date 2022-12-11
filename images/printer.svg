@@ -1,0 +1,12 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_2" height="101" width="257" y="351" x="128" stroke="#000" fill="#ffe500"/>
+  <rect stroke-width="0" stroke="#000" id="svg_3" height="101" width="274.00001" y="58" x="113.99999" fill="#ffe500"/>
+  <ellipse stroke="#000" ry="28" rx="27.5" id="svg_4" cy="273" cx="433.5" fill="#ffe500"/>
+  <ellipse rx="3.5" id="svg_5" cy="275" cx="461.5" stroke="#000" fill="#ffe500"/>
+  <path id="svg_1" d="m128,0c-35.3,0 -64,28.7 -64,64l0,96l64,0l0,-96l226.7,0l29.3,29.3l0,66.7l64,0l0,-66.7c0,-17 -6.7,-33.3 -18.7,-45.3l-29.3,-29.3c-12,-12 -28.3,-18.7 -45.3,-18.7l-226.7,0zm256,352l0,32l0,64l-256,0l0,-64l0,-16l0,-16l256,0zm64,32l32,0c17.7,0 32,-14.3 32,-32l0,-96c0,-35.3 -28.7,-64 -64,-64l-384,0c-35.3,0 -64,28.7 -64,64l0,96c0,17.7 14.3,32 32,32l32,0l0,64c0,35.3 28.7,64 64,64l256,0c35.3,0 64,-28.7 64,-64l0,-64zm-16,-88c-13.3,0 -24,-10.7 -24,-24s10.7,-24 24,-24s24,10.7 24,24s-10.7,24 -24,24z"/>
+ </g>
+</svg>
